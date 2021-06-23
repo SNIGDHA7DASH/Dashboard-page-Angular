@@ -1,0 +1,8 @@
+.logout{
+    border-radius: 40px;
+    margin: 20px; 
+    padding: 10px;
+    color: white;
+    background-color: rgb(27, 26, 26);
+    transition: all .2s;
+}

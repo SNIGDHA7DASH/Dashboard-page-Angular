@@ -1,0 +1,25 @@
+
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row">
+        <div class="col-xl-3 col-md-6" *ngFor="let c of data">
+            <app-card [cardcolor]="c.cardcolor" [cardtype]="c.cardtype"></app-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header"></div>              
+                <div class="card-body"><img src="https://th.bing.com/th/id/OIP.aLWlJwE8mrjG1LEOTWoi-wHaEL?w=284&h=180&c=7&o=5&pid=1.7" style="width: 100%;"></div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                </div>
+                <div class="card-body"><img src="https://www.bing.com/th/id/OGC.e0674b2a40070a52716e2a49c8ccd198?pid=1.7&rurl=https%3a%2f%2fcdn.dribbble.com%2fusers%2f3593%2fscreenshots%2f2475280%2flinechart.gif&ehk=6uYHgdaDfbdGldVV9S1uMLaH5zRi%2bM61F6DcDez%2fjUk%3d" alt="Bar Chart" style="width: 89%;"></div>
+            </div>
+        </div>
+    </div>    

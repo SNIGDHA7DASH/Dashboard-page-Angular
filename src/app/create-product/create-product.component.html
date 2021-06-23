@@ -1,0 +1,34 @@
+<div style="margin: 100px;">
+    <form [formGroup] ="ProductForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="name" formControlName="productname" [ngClass] ="{'form-error':ProductForm.get('productname').touched && ProductForm.get('productname').invalid}" >
+          <span  *ngIf="ProductForm.get('productname').touched && ProductForm.get('productname').invalid">
+            Phone Number
+          </span>
+        </div>
+        <div class="mb-3">
+            <label for="Quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="Quantity" formControlName="quantity" [ngClass] ="{'form-error':ProductForm.get('quantity').touched && ProductForm.get('quantity').invalid}">
+            <span *ngIf="ProductForm.get('quantity').touched && ProductForm.get('quantity').invalid">
+               quantity 
+            </span>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect01">Type</label>
+          <select class="form-select" id="inputGroupSelect01" formControlName="type" [ngClass] ="{'form-error':ProductForm.get('type').touched && ProductForm.get('type').invalid}">
+
+            <option value="Stationary">Stationary</option>
+            <option value="Appliances">Appliances</option>
+          </select>
+          <span  *ngIf="ProductForm.get('type').touched && ProductForm.get('type').invalid">
+            Select product type
+          </span>
+      </div>
+
+        <button type="submit" class="btn btn-primary"[disabled]="!ProductForm.valid" >Submit</button>
+        <button class="btn btn-primary" style="margin: 0 0 0 88%;" routerLink="../product"> Back</button>
+      </form>
+</div>
+
+
